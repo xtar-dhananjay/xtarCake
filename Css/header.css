@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+header{
+    background: var(--main-color);
+    color: var(--white-color);
+    width: 100%;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+}
+
+header #innerHeader{
+    width: 1000px;
+    margin: auto;
+    padding: 20px;
+    max-width: 100%;
+}
+
+#topHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#topHeader .logo, header nav, header nav .navBtn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#topHeader .logo h2{
+    font-size: 25px;
+}
+
+header nav{
+    width: 380px;
+    max-width: 100%;
+}
+
+header nav .navBtn:nth-child(2){
+    position: relative;
+}
+
+header nav .navBtn #countPro{
+    position: absolute;
+    background: var(--white-color);
+    width: 20px;
+    color: var(--main-color);
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 10px;
+    font-size: 13px;
+}
+
+header nav .navBtn{
+    height: 40px;
+    padding: 20px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all ease-in 0.2s;
+}
+
+header nav .navBtn:first-child{
+    background: #fafafa56;
+}
+
+header nav .navBtn:hover{
+    background: #fafafa56;
+}
+
+header nav .activeNav{
+    background: #fafafa56;
+}
+
+header nav .navBtn P{
+    margin-left: 10px;
+}
+
+#topHeader .logo h2{
+    margin-left: 15px;
+}
+
+#searchBar{
+    position: relative;
+    margin-top: 20px;
+}
+
+#searchBar input::placeholder{
+    color: var(--white-color);
+}
+
+#searchBar input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.212);
+    border: 1px solid rgba(255, 255, 255, 0.308);
+    font-size: 16px;
+    outline: none;
+    color: var(--whtie-color);
+    font-weight: 300;
+    padding-left: 20px;
+}
+
+#searchBar .searchIcon{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+#topHeader a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#topHeader .navBtn p{
+    color: #fff;
+}
+
+@media (max-width: 650px) {
+    header nav{
+        background: var(--main-color);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        padding: 15px 20px;
+    }
+    #topHeader .logo a, header nav .navBtn, #searchBar .searchIcon{
+        cursor: default;
+    }
+    
+    header nav .navBtn:hover{
+        background: transparent;
+    }
+
+}
+
+
+@media (max-width: 400px){
+    header nav .navBtn:nth-child(3) p{
+        display: none;
+    }
+} 
