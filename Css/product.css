@@ -315,6 +315,93 @@
     transform: scale(0.97);
 }
 
+#writeReviews{
+    background: var(--white-color);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    padding: 20px;
+    z-index: 100;
+    border-radius: 10px;
+    width: 300px;
+    color: #444;
+    border: 1px solid var(--main-color);
+    opacity: 0;
+    z-index: -100;
+    transform: translate(-50%, -50%) scale(0.02);
+    transition: all cubic-bezier(0.42, 0, 0.37, 1.46) 0.2s;
+}
+
+#writeReviews.active{
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    z-index: 100;
+}
+
+#writeReviews #writereviewHeading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+#writeReviews #writereviewHeading i{
+    cursor: pointer;
+    user-select: none;
+}
+
+#writeReviews h3{
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+#writeReviews #writeStars{
+    margin-bottom: 5px;
+    cursor: default;
+}
+
+#writeReviews #writeStars i{
+    color: lightgray;
+    font-size: 25px;
+    margin: 10px 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+#writeReviews #writeStars .activeStar{
+    color: var(--main-color);
+}
+
+#writeReviews textarea{
+    width: 100%;
+    height: 100px;
+    resize: none;
+    background: transparent;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+    padding: 12px;
+    font-size: 16px;
+}
+
+#writeReviews button{
+    width: 100%;
+    margin-top: 7px;
+    height: 40px;
+    border: none;
+    background: var(--main-color);
+    color: var(--white-color);
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+#writeReviews button:active{
+    transform: scale(0.97);
+}
+
 /* make responsive */
 @media (max-width: 800px){
     #allReviews{
@@ -345,7 +432,7 @@
         height: 450px;
     }
 
-    #mainProduct .buttonBox button, .loadmoreBtn button, #mainProduct #shareBtn{
+    #ratingsBox .reviewBnt button, #mainProduct .buttonBox button, .loadmoreBtn button, #mainProduct #shareBtn{
         cursor: default;
     }
 
@@ -370,6 +457,9 @@
     
     #mainProduct .productImgs{
         height: 350px;
+    }
+    #ratingsBox .reviewBnt button{
+        width: 100%;
     }
 }
 

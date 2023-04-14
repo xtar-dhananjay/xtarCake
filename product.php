@@ -100,7 +100,7 @@
         <div id="ratingsBox">
             <h2>Ratings & Reviews</h2>
             <div class="reviewBnt">
-                <button>Add Reviews</button>
+                <button id="addreivewBtn">Add Reviews</button>
             </div>
             <div id="allReviews">
                 <div class="userRatings">
@@ -298,11 +298,27 @@
             </div>
         </div>
     </div>
+    <div id="writeReviews">
+        <div id="writereviewHeading">
+            <h3>Write reviews</h3>
+            <i id="closeReviewBox" class="fa-sharp fa-solid fa-xmark"></i>
+        </div>
+        <div id="writeStars">
+            <i id="star1" class="fa-solid fa-star"></i>
+            <i id="star2" class="fa-solid fa-star"></i>
+            <i id="star3" class="fa-solid fa-star"></i>
+            <i id="star4" class="fa-solid fa-star"></i>
+            <i id="star5" class="fa-solid fa-star"></i>
+        </div>
+        <textarea id="revewTextarea" placeholder="Write reviews"></textarea>
+        <button id="reviewSubmitBtn">Submit</button>
+    </div>
 
     <?php include 'footer.php' ?>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="Js/swiper.js"></script>
+    <script src="Js/product.js"></script>
 </body>
 
 </html>
