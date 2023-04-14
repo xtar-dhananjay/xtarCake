@@ -310,6 +310,7 @@
             <i id="star4" class="fa-solid fa-star"></i>
             <i id="star5" class="fa-solid fa-star"></i>
         </div>
+        <p id="reviewError">please give the stars and type review</p>
         <textarea id="revewTextarea" placeholder="Write reviews"></textarea>
         <button id="reviewSubmitBtn">Submit</button>
     </div>

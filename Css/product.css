@@ -330,6 +330,8 @@
     z-index: -100;
     transform: translate(-50%, -50%) scale(0.02);
     transition: all cubic-bezier(0.42, 0, 0.37, 1.46) 0.2s;
+    max-width: 100%;
+    margin: 0 20px;
 }
 
 #writeReviews.active{
@@ -402,6 +404,20 @@
     transform: scale(0.97);
 }
 
+#reviewError{
+    display: none;
+    color: #fff;
+    background: rgb(255, 40, 40);
+    padding: 5px 15px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+#reviewError.active{
+    display: block;
+}
+
 /* make responsive */
 @media (max-width: 800px){
     #allReviews{
@@ -432,7 +448,7 @@
         height: 450px;
     }
 
-    #ratingsBox .reviewBnt button, #mainProduct .buttonBox button, .loadmoreBtn button, #mainProduct #shareBtn{
+    #ratingsBox .reviewBnt button, #writeReviews #writereviewHeading i, #writeReviews button, #writeReviews #writeStars i, #mainProduct .buttonBox button, .loadmoreBtn button, #mainProduct #shareBtn{
         cursor: default;
     }
 

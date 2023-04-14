@@ -11,6 +11,7 @@ let productPage = document.getElementById('productPage');
 let closeReviewBox = document.getElementById('closeReviewBox');
 let reviewSubmitBtn = document.getElementById('reviewSubmitBtn');
 let revewTextarea = document.getElementById('revewTextarea');
+let reviewError = document.getElementById('reviewError');
 
 addreivewBtn.onclick = () => {
     header.style.filter="blur(10px)";
@@ -26,6 +27,30 @@ closeReviewBox.onclick = () => {
     writereviewsBox.classList.remove('active');
     removeStar();
     revewTextarea.value="";
+}
+
+let starStatus = false;
+let writeStatus = false;
+reviewSubmitBtn.onclick = () => {
+    reviewStars.forEach(e => {
+        if (e.classList.contains('activeStar')) {
+            starStatus = true;
+        }else{
+        }
+    })
+
+    revewTextarea.value != "" ? writeStatus = true : writeStatus = false;
+
+    if (starStatus == true && writeStatus == true) {
+        reviewError.classList.remove('active');
+        reviewError.classList.remove('active');
+        
+        console.log('this review is ready to submit');
+        // write from here for save the data into data base
+    }else{
+        reviewError.classList.add('active');
+        reviewError.classList.add('active');
+    }
 }
 
 

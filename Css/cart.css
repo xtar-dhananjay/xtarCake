@@ -1,0 +1,246 @@
+#cartPage{
+    width: 1000px;
+    max-width: 100%;
+    margin: 30px auto;
+    padding: 0 20px;
+    margin-bottom: 200px;
+}
+
+#cartPage{
+    display: flex;
+    justify-content: space-between;
+}
+
+#leftCart{
+    border: 1px solid #8348FF;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 64%;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#leftCart .product{
+    padding: 5px;
+    margin-bottom: 10px;
+    background: #8248ff0c;
+    border-radius: 5px;
+    border: 1px solid #8248ff36;
+}
+
+#leftCart .product:last-child{
+    margin-bottom: 0;
+}
+
+#leftCart .product .removeBtn{
+    width: 100%;
+    height: 35px;
+    background: var(--main-color);
+    border: none;
+    color: var(--white-color);
+    margin-top: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    font-size: 14px;
+}
+
+#leftCart .product .productDetails{
+    margin-left: 10px;
+}
+
+#leftCart .product .productDetails h3{
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+}
+
+#leftCart .product .productQTY{
+    margin: 15px 0 10px;
+}
+
+#leftCart .product .productQTY button{
+    background: transparent;
+    border: none;
+    padding: 0 5px;
+    color: var(--main-color);
+    cursor: pointer;
+    user-select: none;
+}
+
+#leftCart .product .productQTY span{
+    color: #333;
+}
+
+#leftCart .product .priceDetails .finalPrice{
+    font-weight: 600;
+    color: #333;
+}
+
+#leftCart .product .priceDetails .oldPrice{
+    text-decoration: line-through;
+    color: #888;
+}
+
+#leftCart .product .priceDetails .totalDescount{
+    color: green;
+}
+
+#leftCart .product .priceDetails{
+    display: flex;
+    align-items: center;
+}
+
+#leftCart .product .priceDetails .totalDescount, #leftCart .product .priceDetails .oldPrice{
+    margin-left: 12px;
+}
+
+#leftCart .product .removeBtn:active{
+    transform: scale(0.98);
+}
+
+#leftCart .product .productTop{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#leftCart .product img{
+    width: 150px;
+    border-radius: 5px;
+}
+
+#rightCart{
+    border: 1px solid var(--main-color);
+    padding: 20px;
+    height: fit-content;
+    width: 33%;
+    border-radius: 5px;
+}
+
+#rightCart #priceTitle{
+    font-size: 23px;
+    font-weight: 500;
+    color: #333;
+}
+
+#rightCart hr{
+    height: 3px;
+    margin: 10px 0 20px;
+    background: var(--main-color);
+    border: none;
+}
+
+#totalpriceDetails{
+    margin-top: 15px;
+}
+
+#totalpriceDetails div{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 0 5px;
+}
+
+#rightCart #deliveryCharge{
+    margin-bottom: 20px;
+}
+
+#rightCart #deliveryCharge p:last-child{
+    color: var(--main-color);
+}
+
+#totalpriceDetails #totalAmount p:last-child{
+    color: var(--main-color);
+}
+
+#totalpriceDetails #totalAmount{
+    border-top: 2px dashed var(--main-color);
+    border-bottom: 2px dashed var(--main-color);
+    padding: 8px 5px;
+}
+
+#rightCart #orderBtn{
+    width: 100%;
+    height: 40px;
+    border: none;
+    color: var(--white-color);
+    background: var(--main-color);
+    border-radius: 5px;
+    font-size: 18px;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+
+#rightCart #orderBtn:active{
+    transform: scale(0.97);
+}
+
+#totalpriceDetails div p{
+    font-size: 16px;
+}
+
+#rightCart #couponBox{
+    user-select: none;
+    border-radius: 5px;
+    background: #8248ff1f;
+}
+
+#rightCart #couponBox #couponHeading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    color: #333;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+#rightCart #couponBox.disActive #couponcdoeBox{
+    display: none;
+}
+
+#couponcdoeBox{
+    padding: 8px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#couponcdoeBox input{
+    width: 100%;
+    height: 35px;
+    padding-left: 15px;
+    border: 1px solid lightgray;
+    margin-bottom: 5px;
+    outline: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#couponcdoeBox button{
+    width: 100%;
+    color: #fff;
+    background: var(--main-color);
+    border: none;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+#couponcdoeBox button:active{
+    transform: scale(0.98);
+}
+
+#rightCart #couponBox #couponHeading h3{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#rightCart #couponBox #couponHeading i{
+    font-size: 16px;
+    cursor: pointer;
+}

@@ -74,7 +74,7 @@ header nav .navBtn{
     transition: all ease-in 0.2s;
 }
 
-header nav .navBtn:first-child{
+header nav .navBtn.activeNav{
     background: #fafafa56;
 }
 
