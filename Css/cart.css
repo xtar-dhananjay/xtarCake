@@ -67,6 +67,7 @@
     color: var(--main-color);
     cursor: pointer;
     user-select: none;
+    outline: none;
 }
 
 #leftCart .product .productQTY span{
@@ -219,6 +220,10 @@
     font-size: 14px;
 }
 
+#couponcdoeBox input.deactivateBtn{
+    pointer-events: none;
+}
+
 #couponcdoeBox button{
     width: 100%;
     color: #fff;
@@ -235,6 +240,11 @@
     transform: scale(0.98);
 }
 
+#couponcdoeBox button.deactivateBtn{
+    pointer-events: none;
+    background: #6d6d6d;
+}
+
 #rightCart #couponBox #couponHeading h3{
     font-weight: 400;
     font-size: 16px;
@@ -243,4 +253,8 @@
 #rightCart #couponBox #couponHeading i{
     font-size: 16px;
     cursor: pointer;
+}
+
+#couponcodePrice{
+    color: var(--main-color);
 }
